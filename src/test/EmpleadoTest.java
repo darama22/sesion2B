@@ -29,12 +29,10 @@ class EmpleadoTest {
 	}
 
 	//TEST DE NOMINAS BRUTAS (METODO DE NOMINAS BRUTAS)
-	
-
     @Test
     void testNominaBrutaVentas0() {
         Empleado empleado = new Empleado();
-        // Fíjate que ahora usamos Empleado.TipoEmpleado.VENDEDOR
+
         float resultado = empleado.calculoNominaBruta(Empleado.TipoEmpleado.VENDEDOR, 0, 0);
         assertEquals(2000, resultado);
     }
@@ -42,6 +40,7 @@ class EmpleadoTest {
     @Test
     void testNominaBrutaVentas999() {
         Empleado empleado = new Empleado();
+        
         float resultado = empleado.calculoNominaBruta(Empleado.TipoEmpleado.VENDEDOR, 999, 0);
         assertEquals(2000, resultado);
     }
@@ -56,6 +55,7 @@ class EmpleadoTest {
     @Test
     void testNominaBrutaVentas1499() {
         Empleado empleado = new Empleado();
+        
         float resultado = empleado.calculoNominaBruta(Empleado.TipoEmpleado.VENDEDOR, 1499, 0);
         assertEquals(2100, resultado);
     }
@@ -63,6 +63,7 @@ class EmpleadoTest {
     @Test
     void testNominaBrutaVentas1500() {
         Empleado empleado = new Empleado();
+        
         float resultado = empleado.calculoNominaBruta(Empleado.TipoEmpleado.VENDEDOR, 1500, 0);
         assertEquals(2200, resultado);
     }
@@ -102,7 +103,7 @@ class EmpleadoTest {
     @Test
     void testNominaNeta2499() {
         Empleado empleado = new Empleado();
-        // Usamos el delta (0.01f) para evitar fallos por los decimales de Java
+
         float resultado = empleado.calculoNominaNeta(2499);
         assertEquals(2124.15f, resultado, 0.01f); 
     }
@@ -110,6 +111,7 @@ class EmpleadoTest {
     @Test
     void testNominaNeta2500() {
         Empleado empleado = new Empleado();
+        
         float resultado = empleado.calculoNominaNeta(2500);
         assertEquals(2050, resultado);
     }
